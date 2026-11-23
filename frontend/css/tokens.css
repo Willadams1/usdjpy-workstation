@@ -1,0 +1,50 @@
+/* Design tokens. Values carry over the M0 identity: navy base, blue-grey panels, gold accent. */
+:root {
+  color-scheme: dark;
+  --font: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  --bg: #0b1120;
+  --sidebar: #0e1728;
+  --sidebar-border: #243148;
+  --surface: #111c2e;
+  --surface-2: #1b2940;
+  --border: #26354c;
+  --border-strong: #34445d;
+  --text: #e8edf5;
+  --text-2: #b7c2d1;
+  --muted: #8291a8;
+  --label: #8796ad;
+  --accent: #6c9bd2;
+  --focus: #9cc2f5;
+
+  --gold: #d5a86b;
+  --gold-text: #d8c09d;
+  --gold-ink: #152033;
+
+  --usd: #6ea8f0;   --usd-bg: rgba(110, 168, 240, .13);
+  --jpy: #46c2cf;   --jpy-bg: rgba(70, 194, 207, .12);
+  --pos: #5cc98a;   --pos-bg: rgba(92, 201, 138, .12);
+  --neg: #ee7a83;   --neg-bg: rgba(238, 122, 131, .12);
+  --caution: #d5a86b; --caution-bg: #241f1a; --caution-border: #6b5536; --caution-text: #d7c5a8;
+  --neutral: #9aa6ba; --neutral-bg: rgba(154, 166, 186, .12);
+  --mixed: #b59cec; --mixed-bg: rgba(181, 156, 236, .13);
+  --info: #6c9bd2;  --info-bg: rgba(108, 155, 210, .12);
+
+  --radius: 12px;
+  --pad: 19px;
+  --gap: 16px;
+  --row-pad: 12px;
+  --sidebar-w: 250px;
+  --sidebar-w-collapsed: 68px;
+}
+
+[data-density="compact"] { --pad: 14px; --gap: 12px; --row-pad: 7px; }
+
+.tone-usd { --tone: var(--usd); --tone-bg: var(--usd-bg); }
+.tone-jpy { --tone: var(--jpy); --tone-bg: var(--jpy-bg); }
+.tone-pos { --tone: var(--pos); --tone-bg: var(--pos-bg); }
+.tone-neg { --tone: var(--neg); --tone-bg: var(--neg-bg); }
+.tone-caution { --tone: var(--caution); --tone-bg: var(--caution-bg); }
+.tone-neutral { --tone: var(--neutral); --tone-bg: var(--neutral-bg); }
+.tone-mixed { --tone: var(--mixed); --tone-bg: var(--mixed-bg); }
+.tone-info { --tone: var(--info); --tone-bg: var(--info-bg); }

@@ -6,7 +6,15 @@ A research, chart-analysis, journaling and paper-trade workstation for USD/JPY.
 All market/fundamental values are placeholders until a source and data contract are approved.
 
 ## Current milestone
-Milestone 0 — Project foundation.
+Milestone 1 — Workstation interface: implemented, **awaiting product-owner review and acceptance**. Milestone 0 (foundation) is approved as the baseline.
+
+## The interface (M1)
+Eight sections reached by a collapsible sidebar (`#/overview`, `#/market`, `#/fundamentals`, `#/intelligence`, `#/strategy`, `#/journal`, `#/research`, `#/settings`). Everything shown is **sample or placeholder content**, labelled as such. No market data, news, calendar, database, AI or broker is connected, and no trading is possible.
+
+- Plain HTML, CSS and native ES modules: no framework, no build step, no new dependencies.
+- Navigation uses the URL hash, so no server changes were needed and the M0 security controls are untouched.
+- Interface preferences (sidebar state, display timezone, density) are stored in this browser only. Nothing else is stored.
+- Developer guide: `docs/FRONTEND_GUIDE.md`. Manual test list for Windows: `docs/MANUAL_TEST_CHECKLIST_M1.md`.
 
 ## Technology
 - Node.js backend (ES modules)
@@ -49,7 +57,7 @@ Settings come from environment variables. The server loads `<project>/.env` if i
 - `npm run dev` restarts on code changes but not on `.env` changes: restart it after editing `.env`.
 
 ## Tests
-`npm test` runs the Node built-in test runner: configuration checks plus real HTTP tests (health endpoint, malformed URLs, path traversal, error format, stability after invalid requests). The tests start their own server on a random free port, so they do not need the app to be running. They ignore your `.env` settings.
+`npm test` runs the Node built-in test runner: configuration checks, real HTTP tests of the server (health endpoint, malformed URLs, path traversal, symlink escapes, error format, stability), and frontend tests (routes, imports, safety rules, sample-data labelling, time and state logic). 8 symlink tests are **skipped, not passed,** on systems that do not permit creating symlinks (for example Windows without Developer Mode); the summary line shows them as `skipped`. The tests start their own server on a random free port, so they do not need the app to be running. They ignore your `.env` settings.
 
 ## API errors
 Every non-2xx response is JSON in a stable shape: `{ "error": { "code": "MACHINE_READABLE_CODE", "message": "Human-readable text" } }`. Codes are part of the contract; messages may change.

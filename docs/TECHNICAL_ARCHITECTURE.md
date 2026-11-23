@@ -4,6 +4,9 @@
 Browser UI -> Node.js REST API -> domain services -> MySQL (planned).
 Scheduled collectors will retrieve official/elected data sources. A deterministic calculation service will produce numerical scores. An AI interpretation service will summarize and classify sourced evidence without inventing numeric values.
 
+## Frontend (M1)
+Native ES modules and plain CSS, no framework or build step. Hash routing (`#/section`) means the static server needs no fallback route. Pure logic (routes, driver-state classification, filters, preferences, time, health) is separated from DOM code so it can be tested in Node. All text is inserted with `textContent`; there is no `innerHTML`. The frontend talks to the backend only through `GET /api/health`. See `docs/FRONTEND_GUIDE.md`.
+
 ## Initial implementation decisions
 - Node.js 20+ with ES modules.
 - Plain HTML/CSS/JavaScript for the first UI iteration to keep the learning and deployment surface small.

@@ -7,13 +7,16 @@
 - [ ] Select browser IDE/runtime.
 - [ ] Create Git repository and first commit.
 - [ ] Run locally and verify health endpoint.
-- [ ] Review docs and approve baseline.
+- [x] Review docs and approve baseline. (Approved by product owner, 2026-11-18.)
 
-## M1 — Workstation interface
-- Overview dashboard and navigation.
-- Responsive layout and reusable components.
-- Dedicated module shells.
-- No fabricated live data; use clearly labelled fixtures.
+## M1 — Workstation interface (implemented; awaiting product-owner review and acceptance)
+- [x] Collapsible sidebar, header (clock, session, status) and hash navigation for eight sections.
+- [x] Overview, Market, Fundamentals, Intelligence, Strategy, Journal, Research and Settings pages.
+- [x] Reusable components: cards, badges, status chips, meters, tables, filters, empty/loading/error states, sample labels.
+- [x] Responsive layout (desktop, tablet, mobile drawer).
+- [x] All demonstration content labelled as sample; no live data, scores, strategy rules or trading.
+- [x] Frontend tests added; M0 tests unchanged.
+- [ ] Product-owner acceptance (see `docs/MANUAL_TEST_CHECKLIST_M1.md`).
 
 ## M2 — Persistence and identity
 - Approve database schema and migrations.

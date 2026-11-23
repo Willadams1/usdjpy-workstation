@@ -1,0 +1,7 @@
+.chart-placeholder { display: grid; place-items: center; align-content: center; gap: 8px; text-align: center; min-height: 280px; padding: 24px; min-width: 0; border: 1px dashed var(--border-strong); border-radius: 9px; color: #8090a8; background: linear-gradient(145deg, #121f33, #0f1929); }
+.chart-symbol { font-size: 24px; font-weight: 700; color: #d7c09c; letter-spacing: .06em; }
+.chart-placeholder p { max-width: 52ch; }
+.feed-item { display: grid; gap: 8px; padding: 16px; background: var(--bg); border: 1px solid var(--border); border-radius: 8px; }
+.feed-item h3 { font-size: 15px; font-weight: 600; }
+.driver-card .sources { font-size: 12.5px; color: var(--muted); display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+.field-label { color: var(--muted); font-size: 12.5px; }
